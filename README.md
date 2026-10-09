@@ -1,3 +1,25 @@
+> **Unofficial temporary compatibility fork — v2.8.0-private.1.**
+> Based on [droans/mass-player-card v2.8.0](https://github.com/droans/mass-player-card/releases/tag/v2.8.0).
+> Nine element-name references change from `lit-virtualizer` to
+> `mass-player-virtualizer` to avoid a global custom-element collision with
+> Home Assistant's frontend. This is not an official or endorsed upstream release.
+> Original authorship and license are retained. No dependency or feature changes.
+>
+> The attached `mass-player-card.js` is a reproducible, SHA256-pinned transform of
+> the upstream release bundle, not a TypeScript recompilation. Run
+> `python3 compatibility/reproduce.py --output /tmp/mass-player-card.js` and verify
+> `compatibility/SHA256SUMS`. The upstream source tag's package version differs
+> from its release version; source metadata and the bundle's version banner are
+> deliberately unchanged. The GitHub release tag identifies this fork version.
+>
+> Earlier browser acceptance on HA 2026.10.0 confirmed both actual virtualizers
+> register and scroll in both load orders. This is a focused compatibility fix,
+> not a guarantee for other HA versions or physical playback. Install through
+> HACS Custom repositories, type **Dashboard**, selecting `v2.8.0-private.1`.
+> Uninstall the upstream HACS card first: both repositories use the same directory
+> and custom card name. Never install or load both simultaneously. Open a fresh
+> browser context after changing resources. Return to upstream when it ships a fix.
+
 <div align="center">
 
 [![GitHub Release][release-shield]][release]
